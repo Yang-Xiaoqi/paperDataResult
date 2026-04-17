@@ -1,0 +1,92 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/root/CoDe_code/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "PyYAML==6.0.2",
+      "sacred==0.8.7",
+      "torch==2.8.0+cu128"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_eac09f2413023598269c1807e699e040.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_9f88b78b474d0ce1dd455a6d56d289ab.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_32323922529ff464e82f4dd3c5b42077.py"
+      ]
+    ]
+  },
+  "heartbeat": "2026-04-16T04:30:58.424808",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Platinum 8470Q",
+    "gpus": {
+      "driver_version": "580.105.08",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 5090",
+          "persistence_mode": true,
+          "total_memory": 32607
+        }
+      ]
+    },
+    "hostname": "autodl-container-0rqrcn89lq-e4a8d2e1",
+    "os": [
+      "Linux",
+      "Linux-5.15.0-78-generic-x86_64-with-glibc2.35"
+    ],
+    "python_version": "3.12.3"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "map_name": "1o_2r_vs_4r"
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=1o_2r_vs_4r"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2026-04-16T01:46:05.398984",
+  "status": "RUNNING"
+}

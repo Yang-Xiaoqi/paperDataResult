@@ -1,0 +1,172 @@
+{
+  "battle_won_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "battle_won_mean_T": [
+    507,
+    10652,
+    20869
+  ],
+  "ep_length_mean": [
+    63.375,
+    84.54166666666667,
+    79.8203125
+  ],
+  "ep_length_mean_T": [
+    507,
+    10652,
+    20869
+  ],
+  "episode": [
+    120,
+    248
+  ],
+  "episode_T": [
+    10210,
+    20373
+  ],
+  "epsilon": [
+    1.0,
+    0.80601,
+    0.612913
+  ],
+  "epsilon_T": [
+    507,
+    10652,
+    20869
+  ],
+  "grad_norm": [
+    0.573398768901825,
+    0.03985247761011124
+  ],
+  "grad_norm_T": [
+    3321,
+    13541
+  ],
+  "loss": [
+    0.06132366135716438,
+    0.016233861446380615
+  ],
+  "loss_T": [
+    3321,
+    13541
+  ],
+  "q_taken_mean": [
+    -0.05434492387458597,
+    -0.038877572749106346
+  ],
+  "q_taken_mean_T": [
+    3321,
+    13541
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.163673938160211
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.8442499724911963
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.5381960801675298
+    }
+  ],
+  "return_mean_T": [
+    507,
+    10652,
+    20869
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.625619493005887
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.7110441812923475
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.6781923445704219
+    }
+  ],
+  "return_std_T": [
+    507,
+    10652,
+    20869
+  ],
+  "target_mean": [
+    -0.027663678241328853,
+    -0.0404407081910816
+  ],
+  "target_mean_T": [
+    3321,
+    13541
+  ],
+  "td_error_abs": [
+    0.18013713116460592,
+    0.09509708926121607
+  ],
+  "td_error_abs_T": [
+    3321,
+    13541
+  ],
+  "test_battle_won_mean": [
+    0.0,
+    0.0
+  ],
+  "test_battle_won_mean_T": [
+    507,
+    10652
+  ],
+  "test_ep_length_mean": [
+    93.75,
+    80.89583333333333
+  ],
+  "test_ep_length_mean_T": [
+    507,
+    10652
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_return_mean_T": [
+    507,
+    10652
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_return_std_T": [
+    507,
+    10652
+  ]
+}

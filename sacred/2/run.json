@@ -1,0 +1,106 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/root/CoDe_code/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "PyYAML==6.0.2",
+      "sacred==0.8.7",
+      "torch==2.8.0+cu128"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_a98e75437a3193d321699bdb2b878d10.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_c78ae2405f0d8941c6f662850ff65a8a.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_b0277773964fc75c1060bdfa73d23ffb.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/root/miniconda3/lib/python3.12/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"/root/CoDe_code/src/main.py\", line 35, in my_main\n    run(_run, _config, _log)\n",
+    "  File \"/root/CoDe_code/src/run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/root/CoDe_code/src/run.py\", line 227, in run_sequential\n    learner.train(episode_sample, runner.t_env, episode)\n",
+    "  File \"/root/CoDe_code/src/learners/categorical_q_learner.py\", line 176, in train\n    comm_loss = expressiveness_loss + comm_beta * compactness_loss + comm_entropy_beta * entropy_loss\n                                                                     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\n",
+    "TypeError: only integer tensors of a single element can be converted to an index\n"
+  ],
+  "heartbeat": "2026-04-15T03:47:57.493236",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Platinum 8470Q",
+    "gpus": {
+      "driver_version": "580.105.08",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 5090",
+          "persistence_mode": true,
+          "total_memory": 32607
+        }
+      ]
+    },
+    "hostname": "autodl-container-0rqrcn89lq-e4a8d2e1",
+    "os": [
+      "Linux",
+      "Linux-5.15.0-78-generic-x86_64-with-glibc2.35"
+    ],
+    "python_version": "3.12.3"
+  },
+  "meta": {
+    "command": "my_main",
+    "config_updates": {
+      "env_args": {
+        "map_name": "1o_2r_vs_4r"
+      }
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=1o_2r_vs_4r"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2026-04-15T03:47:37.331870",
+  "status": "FAILED",
+  "stop_time": "2026-04-15T03:47:57.496378"
+}

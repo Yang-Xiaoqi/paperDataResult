@@ -1,0 +1,589 @@
+[INFO 11:44:01] pymarl Running command 'my_main'
+[INFO 11:44:01] pymarl Started run with ID "1"
+[DEBUG 11:44:01] pymarl Starting Heartbeat
+[DEBUG 11:44:01] my_main Started
+[INFO 11:44:01] my_main Experiment Parameters:
+[INFO 11:44:01] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_output_type': 'q',
+    'atom': 51,
+    'batch_size': 32,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'c_beta': 1.0,
+    'checkpoint_path': '',
+    'comm': True,
+    'comm_beta': 0.001,
+    'comm_beta_end_decay': 50000000,
+    'comm_beta_start_decay': 20000000,
+    'comm_beta_target': '1e-2',
+    'comm_embed_dim': 3,
+    'comm_entropy_beta': '1e-6',
+    'comm_entropy_beta_end_decay': 50000000,
+    'comm_entropy_beta_start_decay': 20000000,
+    'comm_entropy_beta_target': '1e-4',
+    'comm_method': 'information_bottleneck_full',
+    'critic_lr': 0.0005,
+    'cut_mu_rank_thres': 80.0,
+    'cut_mu_thres': 1.0,
+    'double_q': True,
+    'draw_message_distributions': False,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '7',
+                    'game_version': None,
+                    'is_print': False,
+                    'map_name': '1o_2r_vs_4r',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'print_rew': False,
+                    'print_steps': 1000,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 496122055,
+                    'state_last_action': True,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epsilon_anneal_time': 50000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'gate_loss_beta': 1e-05,
+    'grad_norm_clip': 10,
+    'is_comm_beta_decay': False,
+    'is_comm_entropy_beta_decay': False,
+    'is_cur_mu': False,
+    'is_print': False,
+    'is_rank_cut_mu': False,
+    'label': 'default_label',
+    'learner': 'cate_q_learner',
+    'learner_log_interval': 20000,
+    'load_step': 0,
+    'loaded_model_ts': 0,
+    'local_results_path': 'results',
+    'log_interval': 20000,
+    'lr': 0.0005,
+    'mac': 'cate_broadcast_comm_mac_full',
+    'make_message_distribution_video': False,
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'cate_qmix_smac_parallel',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'only_downstream': False,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel_x',
+    'runner_log_interval': 20000,
+    'save_model': True,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 496122055,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'test_cut_list': [   0.0,
+                         0.5,
+                         1.0,
+                         1.5,
+                         2.0,
+                         2.5,
+                         3.0,
+                         3.5,
+                         4.0,
+                         4.5,
+                         5.0],
+    'test_cut_prob_list': [   0.0,
+                              0.1,
+                              0.2,
+                              0.3,
+                              0.4,
+                              0.5,
+                              0.6,
+                              0.7,
+                              0.8,
+                              0.9,
+                              1.0],
+    'test_cut_prob_thres': 0.0,
+    'test_greedy': True,
+    'test_interval': 20000,
+    'test_is_cut': False,
+    'test_is_cut_prob': False,
+    'test_is_print_once': False,
+    'test_nepisode': 24,
+    'use_IB': True,
+    'use_cuda': True,
+    'use_tensorboard': True,
+    'vmax': 10,
+    'vmin': -10}
+
+75
+[INFO 11:44:02] my_main Beginning training for 10050000 timesteps
+[INFO 11:44:02] absl No GL library found, so RGB rendering will be disabled. For software rendering install libosmesa.
+[INFO 11:44:02] absl Launching SC2: /root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64 -listen 127.0.0.1 -port 35245 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-_txuj6cz/ -headlessNoRender
+[INFO 11:44:02] absl No GL library found, so RGB rendering will be disabled. For software rendering install libosmesa.
+[INFO 11:44:02] absl No GL library found, so RGB rendering will be disabled. For software rendering install libosmesa.
+[INFO 11:44:02] absl No GL library found, so RGB rendering will be disabled. For software rendering install libosmesa.
+[INFO 11:44:02] absl Connecting to: ws://127.0.0.1:35245/sc2api, attempt: 0, running: True
+[INFO 11:44:02] absl No GL library found, so RGB rendering will be disabled. For software rendering install libosmesa.
+[INFO 11:44:02] absl No GL library found, so RGB rendering will be disabled. For software rendering install libosmesa.
+[INFO 11:44:02] absl No GL library found, so RGB rendering will be disabled. For software rendering install libosmesa.
+[INFO 11:44:02] absl No GL library found, so RGB rendering will be disabled. For software rendering install libosmesa.
+[INFO 11:44:02] absl Launching SC2: /root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64 -listen 127.0.0.1 -port 43849 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-6asrtvss/ -headlessNoRender
+[INFO 11:44:02] absl Launching SC2: /root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64 -listen 127.0.0.1 -port 34697 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-hfci0yi8/ -headlessNoRender
+[INFO 11:44:02] absl Launching SC2: /root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64 -listen 127.0.0.1 -port 42337 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-570e1jz5/ -headlessNoRender
+[INFO 11:44:02] absl Launching SC2: /root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64 -listen 127.0.0.1 -port 40443 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-jby0s4yo/ -headlessNoRender
+[INFO 11:44:02] absl Connecting to: ws://127.0.0.1:43849/sc2api, attempt: 0, running: True
+[INFO 11:44:02] absl Connecting to: ws://127.0.0.1:34697/sc2api, attempt: 0, running: True
+[INFO 11:44:02] absl Launching SC2: /root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64 -listen 127.0.0.1 -port 44933 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-ymt_vftw/ -headlessNoRender
+[INFO 11:44:02] absl Launching SC2: /root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64 -listen 127.0.0.1 -port 41773 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-n8yxu81f/ -headlessNoRender
+[INFO 11:44:02] absl Launching SC2: /root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64 -listen 127.0.0.1 -port 34569 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-3ce_i2nj/ -headlessNoRender
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+[INFO 11:44:02] absl Connecting to: ws://127.0.0.1:42337/sc2api, attempt: 0, running: True
+Command Line: '"/root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 35245 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-_txuj6cz/ -headlessNoRender'
+[INFO 11:44:02] absl Connecting to: ws://127.0.0.1:34569/sc2api, attempt: 0, running: True
+[INFO 11:44:02] absl Connecting to: ws://127.0.0.1:44933/sc2api, attempt: 0, running: True
+[INFO 11:44:02] absl Connecting to: ws://127.0.0.1:40443/sc2api, attempt: 0, running: True
+[INFO 11:44:02] absl Connecting to: ws://127.0.0.1:41773/sc2api, attempt: 0, running: True
+Version: B75689 (SC2.4.10)
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Build: Aug 12 2019 17:16:57
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Command Line: '"/root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 43849 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-6asrtvss/ -headlessNoRender'
+Command Line: '"/root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 34697 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-hfci0yi8/ -headlessNoRender'
+Command Line: '"/root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 34569 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-3ce_i2nj/ -headlessNoRender'
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Command Line: '"/root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 42337 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-570e1jz5/ -headlessNoRender'
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Command Line: '"/root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 44933 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-ymt_vftw/ -headlessNoRender'
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Command Line: '"/root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 40443 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-jby0s4yo/ -headlessNoRender'
+Command Line: '"/root/CoDe_code/3rdparty/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 41773 -dataDir /root/CoDe_code/3rdparty/StarCraftII/ -tempDir /tmp/sc-n8yxu81f/ -headlessNoRender'
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+[INFO 11:44:03] absl Connecting to: ws://127.0.0.1:35245/sc2api, attempt: 1, running: True
+[INFO 11:44:03] absl Connecting to: ws://127.0.0.1:43849/sc2api, attempt: 1, running: True
+[INFO 11:44:03] absl Connecting to: ws://127.0.0.1:34697/sc2api, attempt: 1, running: True
+[INFO 11:44:03] absl Connecting to: ws://127.0.0.1:42337/sc2api, attempt: 1, running: True
+[INFO 11:44:03] absl Connecting to: ws://127.0.0.1:34569/sc2api, attempt: 1, running: True
+[INFO 11:44:03] absl Connecting to: ws://127.0.0.1:44933/sc2api, attempt: 1, running: True
+[INFO 11:44:03] absl Connecting to: ws://127.0.0.1:40443/sc2api, attempt: 1, running: True
+[INFO 11:44:03] absl Connecting to: ws://127.0.0.1:41773/sc2api, attempt: 1, running: True
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Listening on: 127.0.0.1:42337
+Listening on: 127.0.0.1:43849
+Listening on: 127.0.0.1:35245
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:41773
+Listening on: 127.0.0.1:40443
+Listening on: 127.0.0.1:34697
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:44933
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:34569
+Startup Phase 3 complete. Ready for commands.
+[INFO 11:44:04] absl Connecting to: ws://127.0.0.1:35245/sc2api, attempt: 2, running: True
+ConnectHandler: Request from 127.0.0.1:53462 accepted
+ReadyHandler: 127.0.0.1:53462 ready
+[INFO 11:44:04] absl Connecting to: ws://127.0.0.1:34697/sc2api, attempt: 2, running: True
+[INFO 11:44:04] absl Connecting to: ws://127.0.0.1:43849/sc2api, attempt: 2, running: True
+[INFO 11:44:04] absl Connecting to: ws://127.0.0.1:42337/sc2api, attempt: 2, running: True
+ConnectHandler: Request from 127.0.0.1:49248 accepted
+ReadyHandler: 127.0.0.1:49248 ready
+[INFO 11:44:04] absl Connecting to: ws://127.0.0.1:34569/sc2api, attempt: 2, running: True
+[INFO 11:44:04] absl Connecting to: ws://127.0.0.1:44933/sc2api, attempt: 2, running: True
+ConnectHandler: Request from 127.0.0.1:57448 accepted
+[INFO 11:44:04] absl Connecting to: ws://127.0.0.1:41773/sc2api, attempt: 2, running: True
+ReadyHandler: 127.0.0.1:57448 ready
+[INFO 11:44:04] absl Connecting to: ws://127.0.0.1:40443/sc2api, attempt: 2, running: True
+ConnectHandler: Request from 127.0.0.1:46798 accepted
+ReadyHandler: 127.0.0.1:46798 ready
+ConnectHandler: Request from 127.0.0.1:43146 accepted
+ReadyHandler: 127.0.0.1:43146 ready
+ConnectHandler: Request from 127.0.0.1:47620 accepted
+ConnectHandler: Request from 127.0.0.1:53622 accepted
+ConnectHandler: Request from 127.0.0.1:46808 accepted
+ReadyHandler: 127.0.0.1:47620 ready
+ReadyHandler: 127.0.0.1:46808 ready
+ReadyHandler: 127.0.0.1:53622 ready
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Requesting to join a single player game
+Configuring interface options
+Next launch phase started: 5
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Launching next game.
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Using default stable ids, none found at: /root/CoDe_code/3rdparty/StarCraftII/stableid.json
+Game has started.
+Using default stable ids, none found at: /root/CoDe_code/3rdparty/StarCraftII/stableid.json
+Game has started.
+Using default stable ids, none found at: /root/CoDe_code/3rdparty/StarCraftII/stableid.json
+Game has started.
+Using default stable ids, none found at: /root/CoDe_code/3rdparty/StarCraftII/stableid.json
+Successfully loaded stable ids: GameData\stableid.json
+Successfully loaded stable ids: GameData\stableid.json
+Successfully loaded stable ids: GameData\stableid.json
+Game has started.
+Using default stable ids, none found at: /root/CoDe_code/3rdparty/StarCraftII/stableid.json
+Game has started.
+Using default stable ids, none found at: /root/CoDe_code/3rdparty/StarCraftII/stableid.json
+Successfully loaded stable ids: GameData\stableid.json
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Successfully loaded stable ids: GameData\stableid.json
+Successfully loaded stable ids: GameData\stableid.json
+Sending ResponseJoinGame
+/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py:338: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  for row in vals], dtype=np.bool))
+Process Process-4:
+/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py:338: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  for row in vals], dtype=np.bool))
+Process Process-5:
+/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py:338: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  for row in vals], dtype=np.bool))
+Process Process-2:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/CoDe_code/src/runners/parallel_runner_x.py", line 239, in env_worker
+    env.reset()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 355, in reset
+    self._launch()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 338, in _launch
+    for row in vals], dtype=np.bool))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'bool_'?
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/CoDe_code/src/runners/parallel_runner_x.py", line 239, in env_worker
+    env.reset()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 355, in reset
+    self._launch()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 338, in _launch
+    for row in vals], dtype=np.bool))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'bool_'?
+Game has started.
+Using default stable ids, none found at: /root/CoDe_code/3rdparty/StarCraftII/stableid.json
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/CoDe_code/src/runners/parallel_runner_x.py", line 239, in env_worker
+    env.reset()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 355, in reset
+    self._launch()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 338, in _launch
+    for row in vals], dtype=np.bool))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'bool_'?
+/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py:338: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  for row in vals], dtype=np.bool))
+Process Process-3:
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Successfully loaded stable ids: GameData\stableid.json
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/CoDe_code/src/runners/parallel_runner_x.py", line 239, in env_worker
+    env.reset()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 355, in reset
+    self._launch()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 338, in _launch
+    for row in vals], dtype=np.bool))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'bool_'?
+/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py:338: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  for row in vals], dtype=np.bool))
+Process Process-7:
+CloseHandler: 127.0.0.1:49248 disconnected
+/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py:338: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  for row in vals], dtype=np.bool))
+Process Process-1:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/CoDe_code/src/runners/parallel_runner_x.py", line 239, in env_worker
+    env.reset()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 355, in reset
+    self._launch()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 338, in _launch
+    for row in vals], dtype=np.bool))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'bool_'?
+Sending ResponseJoinGame
+CloseHandler: 127.0.0.1:46808 disconnected
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/CoDe_code/src/runners/parallel_runner_x.py", line 239, in env_worker
+    env.reset()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 355, in reset
+    self._launch()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 338, in _launch
+    for row in vals], dtype=np.bool))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'bool_'?
+CloseHandler: 127.0.0.1:57448 disconnected
+/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py:338: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  for row in vals], dtype=np.bool))
+Process Process-6:
+CloseHandler: 127.0.0.1:53622 disconnected
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/CoDe_code/src/runners/parallel_runner_x.py", line 239, in env_worker
+    env.reset()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 355, in reset
+    self._launch()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 338, in _launch
+    for row in vals], dtype=np.bool))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'bool_'?
+CloseHandler: 127.0.0.1:43146 disconnected
+CloseHandler: 127.0.0.1:46798 disconnected
+CloseHandler: 127.0.0.1:47620 disconnected
+Game has started.
+Using default stable ids, none found at: /root/CoDe_code/3rdparty/StarCraftII/stableid.json
+Successfully loaded stable ids: GameData\stableid.json
+Sending ResponseJoinGame
+/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py:338: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  for row in vals], dtype=np.bool))
+Process Process-8:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/CoDe_code/src/runners/parallel_runner_x.py", line 239, in env_worker
+    env.reset()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 355, in reset
+    self._launch()
+  File "/root/CoDe_code/src/smac_plus/starcraft2/starcraft2.py", line 338, in _launch
+    for row in vals], dtype=np.bool))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'bool_'?
+CloseHandler: 127.0.0.1:53462 disconnected
